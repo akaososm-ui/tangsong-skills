@@ -1,0 +1,4 @@
+interface:
+  display_name: "咨询内容全流程"
+  short_description: "给一个咨询妙记链接后，自动生成咨询报告、素材包、朋友圈、公众号和短视频口播稿。"
+  default_prompt: "Use $student-consultation-content-workflow to process this consultation link end to end: archive the consultation report, extract reusable material, and draft Moments, WeChat article, and short-video outputs without asking for each next step."
