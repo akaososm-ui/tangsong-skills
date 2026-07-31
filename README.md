@@ -2,11 +2,12 @@
 
 Public skill experiments from Tang Song's AI business workflow system.
 
-This repository currently publishes one workflow skill:
+This repository currently publishes Tang Song workflow skills:
 
 | Skill | Use case | Main outputs |
 | --- | --- | --- |
 | `student-consultation-content-workflow` | Process a student consultation Feishu minutes link or transcript end to end. | Consultation report archive, material package, Moments draft, WeChat article draft, and short-video scripts. |
+| `tangsong-humanize-writing` | Reduce AI traces in drafts and revise them into a more natural Tang Song style. | Short diagnosis, V2 rewrite, targeted replacement snippets, or edited document status. |
 
 ## Install
 
@@ -22,15 +23,16 @@ List available skills:
 npx -y skills add akaososm-ui/tangsong-skills --list
 ```
 
-Install only this skill:
+Install one skill:
 
 ```bash
 npx -y skills add akaososm-ui/tangsong-skills --skill student-consultation-content-workflow -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-humanize-writing -g
 ```
 
 ## Requirements
 
-This skill is an orchestration workflow. It works best in an environment that has:
+`student-consultation-content-workflow` is an orchestration workflow. It works best in an environment that has:
 
 - Feishu minutes access when using a Feishu minutes link.
 - `lark-cli` configured for the current user when pulling Feishu transcripts.
@@ -41,6 +43,8 @@ This skill is an orchestration workflow. It works best in an environment that ha
 
 If those companion skills are not installed, the agent can still follow the written workflow, but results may be less consistent.
 
+`tangsong-humanize-writing` can be used on pasted drafts directly. It works best when the user provides the original draft, target channel, and whether they want a full V2 or only targeted edits.
+
 ## Usage
 
 After installation, ask your agent with a consultation source:
@@ -50,6 +54,12 @@ Use $student-consultation-content-workflow to process this consultation minutes 
 ```
 
 You can also paste a transcript instead of a Feishu minutes link.
+
+For AI-trace reduction:
+
+```text
+Use $tangsong-humanize-writing to diagnose and revise this draft into a more natural Tang Song style.
+```
 
 ## Privacy
 

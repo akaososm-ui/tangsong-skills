@@ -1,0 +1,4 @@
+interface:
+  display_name: "唐宋去 AI 味改稿"
+  short_description: "把AI稿改成更像唐宋现场表达的自然改稿版本，适合日课和私域内容"
+  default_prompt: "Use $tangsong-humanize-writing to revise this draft into a more natural Tang Song style while preserving the original meaning."
