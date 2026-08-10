@@ -8,6 +8,7 @@ This repository currently publishes Tang Song workflow skills:
 | --- | --- | --- |
 | `student-consultation-content-workflow` | Process a student consultation Feishu minutes link or transcript end to end. | Consultation report archive, material package, Moments draft, WeChat article draft, and short-video scripts. |
 | `tangsong-humanize-writing` | Reduce AI traces in drafts and revise them into a more natural Tang Song style. | Short diagnosis, V2 rewrite, targeted replacement snippets, or edited document status. |
+| `tangsong-getnote-benchmark-video-transcriber` | Incrementally organize videos from a GetNote benchmark blogger knowledge base. | One Markdown file per video, original transcript, review markers, summary, and source metadata. |
 
 ## Install
 
@@ -28,6 +29,7 @@ Install one skill:
 ```bash
 npx -y skills add akaososm-ui/tangsong-skills --skill student-consultation-content-workflow -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-humanize-writing -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-getnote-benchmark-video-transcriber -g
 ```
 
 ## Requirements
@@ -45,6 +47,8 @@ If those companion skills are not installed, the agent can still follow the writ
 
 `tangsong-humanize-writing` can be used on pasted drafts directly. It works best when the user provides the original draft, target channel, and whether they want a full V2 or only targeted edits.
 
+`tangsong-getnote-benchmark-video-transcriber` works best in an environment that has GetNote MCP tools connected and authorized. It does not create GetNote accounts, knowledge bases, or blogger subscriptions; those should be prepared in GetNote first.
+
 ## Usage
 
 After installation, ask your agent with a consultation source:
@@ -61,9 +65,15 @@ For AI-trace reduction:
 Use $tangsong-humanize-writing to diagnose and revise this draft into a more natural Tang Song style.
 ```
 
+For GetNote benchmark video organization:
+
+```text
+Use $tangsong-getnote-benchmark-video-transcriber to check my GetNote connection, find the benchmark blogger knowledge base, and test one video transcript into local Markdown.
+```
+
 ## Privacy
 
-This workflow is designed for consultation material. Before publishing outputs externally, review all drafts for client privacy, personal details, sensitive business information, and claims that require proof.
+These workflows may process consultation material, private drafts, and benchmark research notes. Before publishing outputs externally, review all drafts for client privacy, personal details, sensitive business information, transcript accuracy, and claims that require proof.
 
 ## License
 

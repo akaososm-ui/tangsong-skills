@@ -1,0 +1,4 @@
+interface:
+  display_name: "Get对标视频整理"
+  short_description: "检查连接并把Get视频整理成带核对标记的Markdown"
+  default_prompt: "使用 $tangsong-getnote-benchmark-video-transcriber，先检查GetNote连接、知识库和保存目录；首次默认测试一条，确认后再增量批量整理。"
