@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill GitHub 发布器"
+  short_description: "把本地Skill校验、清理并发布到GitHub仓库"
+  default_prompt: "Use $tangsong-skill-github-publisher to publish a local skill folder to a GitHub skills repository, update README/VERSION, push it, and verify npx discovery."
