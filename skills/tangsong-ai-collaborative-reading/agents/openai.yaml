@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI协同阅读"
+  short_description: "支持微信读书、纸质书与电子资料的边读边理解工作流"
+  default_prompt: "Use $tangsong-ai-collaborative-reading to set up or run an AI-assisted reading session for this important book."
+policy:
+  allow_implicit_invocation: true
