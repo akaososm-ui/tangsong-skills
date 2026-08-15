@@ -11,6 +11,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-getnote-benchmark-video-transcriber` | Incrementally organize videos from a GetNote benchmark blogger knowledge base. | One Markdown file per video, original transcript, review markers, summary, and source metadata. |
 | `tangsong-skill-github-publisher` | Publish local skill folders to a GitHub skills repository. | Public-safety scan, validation, README/VERSION update, push, and npx discovery verification. |
 | `tangsong-ai-collaborative-reading` | Read important books with AI section by section from WeRead, paper books, PDFs, EPUBs, web materials, scans, photos, or voice notes. | Reading task sheet, collaboration records, understanding cards, and whole-book synthesis. |
+| `tangsong-viral-content-deconstructor` | Deconstruct benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, local files, images, video, audio, or pasted text. | Evidence-grounded teardown card saved to a local content teardown library, with source limits and migration hypotheses. |
 
 ## Install
 
@@ -34,6 +35,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-humanize-writing 
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-getnote-benchmark-video-transcriber -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-skill-github-publisher -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-ai-collaborative-reading -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-viral-content-deconstructor -g
 ```
 
 ## Requirements
@@ -54,6 +56,8 @@ If those companion skills are not installed, the agent can still follow the writ
 `tangsong-getnote-benchmark-video-transcriber` works best in an environment that has GetNote MCP tools connected and authorized. It does not create GetNote accounts, knowledge bases, or blogger subscriptions; those should be prepared in GetNote first.
 
 `tangsong-ai-collaborative-reading` accepts user-provided reading material from multiple sources. It does not require WeRead. For paper books, use photos, scans, page references, or voice notes. For electronic books and web materials, provide the relevant legal excerpts or source links. It preserves source boundaries and does not download or reproduce complete copyrighted books.
+
+`tangsong-viral-content-deconstructor` works best when the source text, transcript, screenshots, or media are already available. It preserves the distinction between evidence, observation, inference, and unverified assumptions; it does not generate imitation copy by default. Its default local output is the current Obsidian Vault's `02-处理/爆款内容拆解库/`.
 
 `tangsong-skill-github-publisher` works best in an environment that has local `git`, GitHub CLI authentication, and a target GitHub skills repository. It can also prepare a local GitHub-ready package when push permissions are not available.
 
