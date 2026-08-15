@@ -1,4 +1,4 @@
 interface:
   display_name: "爆款内容拆解"
-  short_description: "读取已采集内容，拆解爆款结构并沉淀到固定本地知识库"
-  default_prompt: "使用 $tangsong-viral-content-deconstructor 拆解这条内容，并把结果保存到固定内容拆解库。"
+  short_description: "先核验原文与业务，再拆解并沉淀内容结构"
+  default_prompt: "使用 $tangsong-viral-content-deconstructor；先提供可复核原文、我的业务情况和本次内容方向，再开始拆解并保存。"

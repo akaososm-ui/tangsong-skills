@@ -1,6 +1,6 @@
 ---
 name: tangsong-viral-content-deconstructor
-description: Use when the user asks to deconstruct viral or benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, a local text file, image, video, audio, or pasted content. Read already-collected source information first, optionally complete browser/media acquisition, analyze sample validity, audience, mechanism, structure, title/opening, text layout or video/audio evidence, business path, and migration conditions, then save one evidence-grounded teardown to the fixed local content teardown library. Do not write imitation copy unless the user explicitly starts a separate writing stage.
+description: Use when the user asks to deconstruct viral or benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, a local text file, image, video, audio, or pasted content. First verify that complete raw source material is available and collect the user's business context and intended content direction; if built-in acquisition fails or required context is missing, stop and request the missing inputs instead of inferring or saving a partial teardown. Then analyze sample validity, audience, mechanism, structure, title/opening, text layout or video/audio evidence, business path, and migration conditions, and save one evidence-grounded teardown to the fixed local content teardown library. Do not write imitation copy unless the user explicitly starts a separate writing stage.
 ---
 
 # 唐宋爆款内容拆解
@@ -28,6 +28,43 @@ description: Use when the user asks to deconstruct viral or benchmark content fr
 - 不把一次爆款推断为稳定规律，不补造粉丝量、点赞量、评论反馈、商业结果或作者经历。
 - 原作者的表达、案例和人设不能复制；只提取结构、机制、形式和迁移条件。
 - 如果评论区、粉丝量或商业路径无法读取，明确写“未验证”，不要用常识代替。
+- 采集失败时必须让用户提供原始信息；不能用标题、搜索摘要、相近笔记或模型常识补齐正文。
+- 正式拆解前必须取得用户的业务情况和本次想写的内容方向；缺任一项时停在信息收集，不进入七层拆解，也不写入长期库。
+
+## 0. 入场门槛与停止条件
+
+正式拆解必须同时满足三类输入：
+
+### A. 原始内容材料
+
+至少取得一种足以复核内容结构的原始材料：完整网页正文、完整本地 Markdown/Word/PDF、完整视频/音频文件、完整转写、可读的连续截图，或用户直接粘贴的全文。链接本身、标题、摘要、搜索结果和他人的概括不算原始内容。
+
+### B. 用户业务情况
+
+至少明确：
+
+- 你是谁/目前的定位是什么；
+- 服务或产品是什么，解决谁的什么问题；
+- 目标客户是谁；
+- 主要变现方式或希望承接的后端路径；
+- 当前最想通过内容获得什么结果：获客、建立信任、销售、交付或其他。
+
+### C. 本次想写的内容方向
+
+至少明确：
+
+- 想写的主题、问题或暂定标题；
+- 准备发布的平台和内容形式；
+- 这次内容想触达的人群；
+- 期望读者看完后的动作或结果；
+- 希望从样本中重点借鉴什么：选题、开头、结构、表达、案例、转化或其他。
+
+### 硬性停点
+
+- 内置 Browser/Chrome、GetNote、Feishu 或本地检索无法取得原始内容时：说明已经尝试的采集方式，停止拆解，请用户提供上述任一种原始材料。
+- 只有标题、摘要、局部截图或相近内容时：不得做标题级拆解、不得推断正文、不得创建“完整拆解”文件；最多在对话中列出缺口，等待用户补源。
+- 原始内容已取得，但业务情况或内容方向缺失时：只发送一次信息采集卡，停止拆解和写库。
+- 粉丝量、互动数据、评论或作者商业路径缺失不阻断拆解，但必须标记“未验证”；它们属于可选证据，不得假造。
 
 ## 工作流
 
@@ -43,7 +80,11 @@ description: Use when the user asks to deconstruct viral or benchmark content fr
 
 如果已经存在完整转写或 GetNote 原文，不要再次用摘要代替原文，也不要重复下载。若来源只有摘要，要标记“只有摘要，未取得原文”。
 
+如果所有内置方式都无法取得完整原始内容，执行“硬性停点”：告诉用户页面/工具无法读取，列出可接受的补源方式（粘贴全文、上传视频/音频、提供完整转写、提供连续截图、提供本地文件路径），然后等待用户补充。不要把失败的采集记录当成拆解结果写入固定库。
+
 可接受的输入包括：抖音/小红书/公众号/视频号链接、GetNote 笔记 ID 或链接、Feishu 文档/文件夹、Obsidian 路径、Markdown/Word/PDF/网页文字、用户粘贴的原文、视频/音频文件、截图和手工记录。
+
+链接只有在页面可读并取得正文/媒体内容后才算有效输入；“有链接但打不开”不等于“已取得内容”。
 
 ### 媒体类型分流
 
@@ -77,7 +118,27 @@ description: Use when the user asks to deconstruct viral or benchmark content fr
 
 页面直接可读时，优先保留页面提供的章节、时间、作者信息、互动数据和最终跳转 URL。文字页面优先读取正文、标题层级、图片文字、作者信息和评论；不要只使用搜索摘要。视频可播放时，至少抽取首帧、开头、中段、方法段和结尾关键帧；没有视频文件时，使用 Browser 截图并说明限制。
 
+### 2.1 记录用户业务与本次内容方向
+
+在进入样本判断前，先建立以下上下文；缺失时停止，不用模型记忆补全：
+
+| 字段 | 用户提供的信息 |
+|---|---|
+| 当前定位 |  |
+| 产品/服务 |  |
+| 目标客户 |  |
+| 变现路径 |  |
+| 本次内容主题/暂定标题 |  |
+| 发布平台与形式 |  |
+| 想触达的人群 |  |
+| 期望动作/业务结果 |  |
+| 希望重点借鉴的维度 |  |
+
+拆解时必须用这份上下文判断“人群是否值得学、业务是否值得学、哪些结构能迁移”，不能只给脱离业务的通用分析。
+
 ### 3. 判断样本是否值得拆
+
+只有在“原始内容材料 + 用户业务情况 + 本次内容方向”三项均已通过入场检查后，才执行本节。缺少互动数据不阻断，但要把数据结论写成“未验证”。
 
 先给四个结论，不要先写正文：
 
@@ -152,6 +213,8 @@ description: Use when the user asks to deconstruct viral or benchmark content fr
 4. 不把作者业务结果等同于内容结构效果。
 5. 不进入写作，除非用户明确说“进入写作阶段”。
 
+AI 只负责整理已取得的原始材料和用户已提供的业务上下文；不能替用户补写业务定位、内容目标或缺失的原文。
+
 老师必须确认：样本是否值得拆、主机制是否成立、迁移条件是否成立。未确认的拆解只能标记为“初稿”，不能进入长期方法论。
 
 ### 6. 写入固定本地库
@@ -166,10 +229,14 @@ YYYY-MM-DD｜平台｜作者｜标题短名.md
 
 写入后更新 `00-索引.md`，至少记录日期、平台、作者、标题、内容类型、数据判断、主要机制、业务匹配度和文件链接。
 
+未通过入场门槛时，不创建完整拆解文件、不更新索引；如用户明确要求保留采集缺口，才另建“待补原始材料”记录，并明确它不是拆解结果。
+
 ### 7. 验收
 
 - [ ] 已读取已有采集信息，再决定是否补采集。
 - [ ] 已保留最终 URL 和来源类型。
+- [ ] 已取得可复核的原始内容；采集失败时已停下并索要原始信息。
+- [ ] 已取得用户业务情况和本次想写的内容方向。
 - [ ] 数据事实、观察、推断和假设已分开。
 - [ ] 已说明原文、转写、画面和评论的可得程度。
 - [ ] 已完成七层拆解，不只分析标题。
@@ -179,4 +246,4 @@ YYYY-MM-DD｜平台｜作者｜标题短名.md
 
 ## 默认完成报告
 
-最终只需报告：采集到什么、写入哪个文件、哪些信息已验证、哪些仍缺失、是否生成了写作内容。不要把临时下载文件当成长期资产；长期资产是本地拆解 Markdown 和索引。
+最终只需报告：采集到什么、用户业务与本次内容方向是什么、写入哪个文件、哪些信息已验证、哪些仍缺失、是否生成了写作内容。若触发停止条件，只报告缺什么以及用户可提供什么，不创建完整拆解文件。不要把临时下载文件当成长期资产；长期资产是本地拆解 Markdown 和索引。

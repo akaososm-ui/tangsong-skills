@@ -57,7 +57,7 @@ If those companion skills are not installed, the agent can still follow the writ
 
 `tangsong-ai-collaborative-reading` accepts user-provided reading material from multiple sources. It does not require WeRead. For paper books, use photos, scans, page references, or voice notes. For electronic books and web materials, provide the relevant legal excerpts or source links. It preserves source boundaries and does not download or reproduce complete copyrighted books.
 
-`tangsong-viral-content-deconstructor` works best when the source text, transcript, screenshots, or media are already available. It preserves the distinction between evidence, observation, inference, and unverified assumptions; it does not generate imitation copy by default. Its default local output is the current Obsidian Vault's `02-处理/爆款内容拆解库/`.
+`tangsong-viral-content-deconstructor` requires three inputs before a formal teardown: complete, reviewable raw content; the user's business context; and the intended content direction. If built-in Browser/Chrome, GetNote, Feishu, or local acquisition cannot obtain the raw material, it stops and asks the user for the original text, file, transcript, screenshots, or media instead of inferring from a title or summary. It preserves the distinction between evidence, observation, inference, and unverified assumptions; it does not generate imitation copy by default. Its default local output is the current Obsidian Vault's `02-处理/爆款内容拆解库/`.
 
 `tangsong-skill-github-publisher` works best in an environment that has local `git`, GitHub CLI authentication, and a target GitHub skills repository. It can also prepare a local GitHub-ready package when push permissions are not available.
 
