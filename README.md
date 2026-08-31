@@ -12,6 +12,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-skill-github-publisher` | Publish local skill folders to a GitHub skills repository. | Public-safety scan, validation, README/VERSION update, push, and npx discovery verification. |
 | `tangsong-ai-collaborative-reading` | Read important books with AI section by section from WeRead, paper books, PDFs, EPUBs, web materials, scans, photos, or voice notes. | Reading task sheet, collaboration records, understanding cards, and whole-book synthesis. |
 | `tangsong-viral-content-deconstructor` | Deconstruct benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, local files, images, video, audio, or pasted text. | Evidence-grounded teardown card saved to a local content teardown library, with source limits and migration hypotheses. |
+| `tangsong-product-pain-solution` | Help creators and entrepreneurs turn a product idea, customer problem, capability, or underperforming offer into one focused product definition. | Core pain, priority customer, product/solution structure, delivery boundary, pain-to-sell-point map, and price reference. |
 
 ## Install
 
@@ -36,6 +37,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-getnote-benchmark
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-skill-github-publisher -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-ai-collaborative-reading -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-viral-content-deconstructor -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-product-pain-solution -g
 ```
 
 ## Requirements
@@ -87,6 +89,12 @@ For publishing a local skill:
 
 ```text
 Use $tangsong-skill-github-publisher to publish this local skill folder to my GitHub skills repository and verify npx discovery.
+```
+
+For product pain and solution definition:
+
+```text
+Use $tangsong-product-pain-solution to help me define one product's core pain, priority customer, solution, delivery structure, and price range.
 ```
 
 ## Privacy

@@ -1,0 +1,4 @@
+interface:
+  display_name: "产品痛点与解决方案梳理"
+  short_description: "从产品想法梳理真实痛点、目标客户与可交付解决方案"
+  default_prompt: "Use $tangsong-product-pain-solution to help me define one product's core pain, priority customer, solution, delivery structure, and price range."
