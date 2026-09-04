@@ -1,0 +1,4 @@
+interface:
+  display_name: "Personal AI Manual"
+  short_description: "帮助个人背景和工作流变成可复用 AI 协作说明书模板"
+  default_prompt: "Use $tangsong-personal-ai-manual to help me draft a practical personal AI collaboration manual."
