@@ -10,6 +10,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-humanize-writing` | Reduce AI traces in drafts and revise them into a more natural Tang Song style. | Short diagnosis, V2 rewrite, targeted replacement snippets, or edited document status. |
 | `tangsong-getnote-benchmark-video-transcriber` | Incrementally organize videos from a GetNote benchmark blogger knowledge base. | One Markdown file per video, original transcript, review markers, summary, and source metadata. |
 | `tangsong-skill-github-publisher` | Publish local skill folders to a GitHub skills repository. | Public-safety scan, validation, README/VERSION update, push, and npx discovery verification. |
+| `tangsong-knowledge-closet-builder` | Build a minimal AI-callable personal knowledge base around real business outputs. | Material inventory, staged classification, minimal folder framework, reusable assets, and a 7-day action plan. |
 | `tangsong-ai-collaborative-reading` | Read important books with AI section by section from WeRead, paper books, PDFs, EPUBs, web materials, scans, photos, or voice notes. | Reading task sheet, collaboration records, understanding cards, and whole-book synthesis. |
 | `tangsong-viral-content-deconstructor` | Deconstruct benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, local files, images, video, audio, or pasted text. | Evidence-grounded teardown card saved to a local content teardown library, with source limits and migration hypotheses. |
 | `tangsong-product-pain-solution` | Help creators and entrepreneurs turn a product idea, customer problem, capability, or underperforming offer into one focused product definition. | Core pain, priority customer, product/solution structure, delivery boundary, pain-to-sell-point map, and price reference. |
@@ -35,6 +36,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill student-consultation-conte
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-humanize-writing -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-getnote-benchmark-video-transcriber -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-skill-github-publisher -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-knowledge-closet-builder -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-ai-collaborative-reading -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-viral-content-deconstructor -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-product-pain-solution -g
@@ -63,6 +65,8 @@ If those companion skills are not installed, the agent can still follow the writ
 
 `tangsong-skill-github-publisher` works best in an environment that has local `git`, GitHub CLI authentication, and a target GitHub skills repository. It can also prepare a local GitHub-ready package when push permissions are not available.
 
+`tangsong-knowledge-closet-builder` works best when the user can provide a real business or project context, a consistent content or delivery goal, and an initial set of existing materials. It starts with a minimal staged framework and does not invent business facts or build a complex taxonomy before understanding the user's workflow.
+
 ## Usage
 
 After installation, ask your agent with a consultation source:
@@ -89,6 +93,12 @@ For publishing a local skill:
 
 ```text
 Use $tangsong-skill-github-publisher to publish this local skill folder to my GitHub skills repository and verify npx discovery.
+```
+
+For building a personal knowledge base:
+
+```text
+Use $tangsong-knowledge-closet-builder to help me build a minimal AI-callable knowledge base framework from my existing materials.
 ```
 
 For product pain and solution definition:
