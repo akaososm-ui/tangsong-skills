@@ -1,0 +1,4 @@
+interface:
+  display_name: "唐宋知识库框架搭建"
+  short_description: "用阶段流动法一步步搭建AI可调用的个人知识库框架和内容入口"
+  default_prompt: "Use $tangsong-knowledge-closet-builder to help me build a minimal AI-callable knowledge base framework from my existing materials."
