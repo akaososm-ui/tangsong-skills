@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Course Builder"
+  short_description: "Build evidence-based courses from real teaching experience"
+  default_prompt: "Use $ai-course-builder to turn my teaching materials into a reviewable, deliverable course plan."

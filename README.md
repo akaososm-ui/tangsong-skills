@@ -15,6 +15,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-viral-content-deconstructor` | Deconstruct benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, local files, images, video, audio, or pasted text. | Evidence-grounded teardown card saved to a local content teardown library, with source limits and migration hypotheses. |
 | `tangsong-product-pain-solution` | Help creators and entrepreneurs turn a product idea, customer problem, capability, or underperforming offer into one focused product definition. | Core pain, priority customer, product/solution structure, delivery boundary, pain-to-sell-point map, and price reference. |
 | `tangsong-personal-ai-manual` | Turn a person's real identity, work, goals, preferences, boundaries, and source locations into a reusable AI collaboration manual. | Practical personal AI manual, copy-ready instruction block, community worksheet, and missing-information checklist. |
+| `ai-course-builder` | Turn real teaching experience, learner problems, and course materials into a reviewable class or curriculum. | Course brief, experience map, outline, teaching package, learner exercises, review gates, and retrospective assets. |
 
 ## Install
 
@@ -42,6 +43,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-ai-collaborative-
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-viral-content-deconstructor -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-product-pain-solution -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-personal-ai-manual -g
+npx -y skills add akaososm-ui/tangsong-skills --skill ai-course-builder -g
 ```
 
 ## Requirements
@@ -66,6 +68,8 @@ If those companion skills are not installed, the agent can still follow the writ
 `tangsong-viral-content-deconstructor` requires three inputs before a formal teardown: complete, reviewable raw content; the user's business context; and the intended content direction. If built-in Browser/Chrome, GetNote, Feishu, or local acquisition cannot obtain the raw material, it stops and asks the user for the original text, file, transcript, screenshots, or media instead of inferring from a title or summary. It preserves the distinction between evidence, observation, inference, and unverified assumptions; it does not generate imitation copy by default. Its default local output is the current Obsidian Vault's `02-处理/爆款内容拆解库/`.
 
 `tangsong-personal-ai-manual` works best when the person provides current, stated information about their identity, work or business, goals, AI experience, channels, workflows, preferences, and boundaries. Missing facts are marked as `待补` rather than invented. It does not require a specific external connector; users can provide answers, notes, profiles, or source paths directly.
+
+`ai-course-builder` works from the instructor's real experience, learner problems, evidence, and authorized course materials. It does not require Obsidian, Feishu, or a specific presentation tool. When essential inputs are missing, it returns an intake brief instead of inventing a finished course. It keeps human review gates before visual production or publishing and includes privacy, copyright, and provenance checks.
 
 `tangsong-skill-github-publisher` works best in an environment that has local `git`, GitHub CLI authentication, and a target GitHub skills repository. It can also prepare a local GitHub-ready package when push permissions are not available.
 
@@ -115,6 +119,12 @@ For a personal AI collaboration manual:
 
 ```text
 Use $tangsong-personal-ai-manual to help me draft a practical personal AI collaboration manual from my real background and workflows.
+```
+
+For course design:
+
+```text
+Use $ai-course-builder to turn my teaching materials into a reviewable, deliverable course plan.
 ```
 
 ## Privacy
