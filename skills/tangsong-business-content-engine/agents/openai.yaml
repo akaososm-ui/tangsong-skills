@@ -1,0 +1,7 @@
+interface:
+  display_name: "业务成交内容生产线"
+  short_description: "从一个内容母体生成一周成交内容"
+  default_prompt: "使用 $tangsong-business-content-engine，基于我的真实内容母体和业务目标生成一周私域成交内容。"
+
+policy:
+  allow_implicit_invocation: true

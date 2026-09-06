@@ -15,6 +15,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-viral-content-deconstructor` | Deconstruct benchmark content from Douyin, Xiaohongshu, WeChat, GetNote, Feishu, local files, images, video, audio, or pasted text. | Evidence-grounded teardown card saved to a local content teardown library, with source limits and migration hypotheses. |
 | `tangsong-product-pain-solution` | Help creators and entrepreneurs turn a product idea, customer problem, capability, or underperforming offer into one focused product definition. | Core pain, priority customer, product/solution structure, delivery boundary, pain-to-sell-point map, and price reference. |
 | `tangsong-personal-ai-manual` | Turn a person's real identity, work, goals, preferences, boundaries, and source locations into a reusable AI collaboration manual. | Practical personal AI manual, copy-ready instruction block, community worksheet, and missing-information checklist. |
+| `tangsong-business-content-engine` | Turn one real content mother into a business-driven weekly package for WeChat Moments, WeChat Official Account, and short-video scripts. | Content mother card, 27-unit weekly matrix, three platform drafts, generation rule card, and reviewed weekly package. |
 | `ai-course-builder` | Turn real teaching experience, learner problems, and course materials into a reviewable class or curriculum. | Course brief, experience map, outline, teaching package, learner exercises, review gates, and retrospective assets. |
 
 ## Install
@@ -43,6 +44,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-ai-collaborative-
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-viral-content-deconstructor -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-product-pain-solution -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-personal-ai-manual -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-business-content-engine -g
 npx -y skills add akaososm-ui/tangsong-skills --skill ai-course-builder -g
 ```
 
@@ -74,6 +76,8 @@ If those companion skills are not installed, the agent can still follow the writ
 `tangsong-skill-github-publisher` works best in an environment that has local `git`, GitHub CLI authentication, and a target GitHub skills repository. It can also prepare a local GitHub-ready package when push permissions are not available.
 
 `tangsong-knowledge-closet-builder` works best when the user can provide a real business or project context, a consistent content or delivery goal, and an initial set of existing materials. It starts with a minimal staged framework and does not invent business facts or build a complex taxonomy before understanding the user's workflow.
+
+`tangsong-business-content-engine` does not require Feishu, Obsidian, a specific model, or an external connector. It works from pasted text or user-provided files. The default workflow is staged: it produces a content mother, matrix, and three platform drafts first, then waits for user edits and confirmation before generating the full weekly package. It does not publish automatically and does not treat reach metrics as proof of sales.
 
 ## Usage
 
@@ -119,6 +123,12 @@ For a personal AI collaboration manual:
 
 ```text
 Use $tangsong-personal-ai-manual to help me draft a practical personal AI collaboration manual from my real background and workflows.
+```
+
+For a business-driven weekly content package:
+
+```text
+Use $tangsong-business-content-engine to turn my real content mother into a weekly private-domain sales content package. Start with input diagnosis and a 7-day matrix; do not batch-generate until I confirm the three platform drafts and the generation rules.
 ```
 
 For course design:
