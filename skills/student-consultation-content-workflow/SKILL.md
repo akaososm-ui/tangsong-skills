@@ -241,3 +241,11 @@ Examples:
 - If privacy risk is high, still create internal drafts but mark them `仅内部参考` and anonymize aggressively.
 
 Do not fabricate missing facts, outcomes, student quotes, payment status, or performance data.
+
+## 作者与联系
+
+唐宋AI商业教练，擅长商业闭环设计，专注于流量变现、产品设计、营销成交与 AI 赋能商业化。
+
+提供线上陪跑、一对一咨询、社群 + 知识库服务。
+
+微信：`tangsong0099`

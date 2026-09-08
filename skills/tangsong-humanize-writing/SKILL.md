@@ -96,3 +96,11 @@ When editing a local or online document:
 - preserve the original unless the user asks to overwrite;
 - create a V2 copy or apply targeted edits to the named version;
 - verify by rereading the changed document.
+
+## 作者与联系
+
+唐宋AI商业教练，擅长商业闭环设计，专注于流量变现、产品设计、营销成交与 AI 赋能商业化。
+
+提供线上陪跑、一对一咨询、社群 + 知识库服务。
+
+微信：`tangsong0099`

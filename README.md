@@ -1,6 +1,16 @@
 # tangsong-skills
 
-Public skill experiments from Tang Song's AI business workflow system.
+公开的 AI 工作流 Skill 集合，服务于真实的商业、内容、知识库与交付场景。
+
+## 创作者与联系
+
+创作者：唐宋AI商业教练
+
+擅长商业闭环设计，专注于流量变现、产品设计、营销成交与 AI 赋能商业化。
+
+提供线上陪跑、一对一咨询、社群 + 知识库服务。
+
+微信：`tangsong0099`
 
 This repository currently publishes Tang Song workflow skills:
 

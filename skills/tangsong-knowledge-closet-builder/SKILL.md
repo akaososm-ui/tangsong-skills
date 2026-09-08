@@ -204,3 +204,11 @@ For a live workshop or classroom setting, use a shorter task-card structure:
 - Do not treat tools as the main point.
 - Do not use vague labels such as `资料`, `灵感`, or `杂项` as the whole framework.
 - Do not promise that the knowledge base can automatically solve business problems without user material and judgment.
+
+## 作者与联系
+
+唐宋AI商业教练，擅长商业闭环设计，专注于流量变现、产品设计、营销成交与 AI 赋能商业化。
+
+提供线上陪跑、一对一咨询、社群 + 知识库服务。
+
+微信：`tangsong0099`
