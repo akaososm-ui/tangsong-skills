@@ -1,0 +1,4 @@
+interface:
+  display_name: "OPC线下活动筹备落地"
+  short_description: "设计能承接后端转化的OPC线下活动方案和落地执行包"
+  default_prompt: "Use $tangsong-opc-offline-event-planner to design an offline event that can support backend conversion."

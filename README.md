@@ -27,6 +27,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-personal-ai-manual` | Turn a person's real identity, work, goals, preferences, boundaries, and source locations into a reusable AI collaboration manual. | Practical personal AI manual, copy-ready instruction block, community worksheet, and missing-information checklist. |
 | `tangsong-business-content-engine` | Turn one real content mother into a business-driven weekly package for WeChat Moments, WeChat Official Account, and short-video scripts. | Content mother card, 27-unit weekly matrix, three platform drafts, generation rule card, and reviewed weekly package. |
 | `ai-course-builder` | Turn real teaching experience, learner problems, and course materials into a reviewable class or curriculum. | Course brief, experience map, outline, teaching package, learner exercises, review gates, and retrospective assets. |
+| `tangsong-opc-offline-event-planner` | Design and execute a first or repeat OPC offline event that creates an onsite result and supports a clear backend next step. | Complete event strategy, recruitment and poster copy, registration questions, project schedule, role and material checklists, onsite agenda, follow-up, recap, and public case card. |
 
 ## Install
 
@@ -56,6 +57,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-product-pain-solu
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-personal-ai-manual -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-business-content-engine -g
 npx -y skills add akaososm-ui/tangsong-skills --skill ai-course-builder -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-opc-offline-event-planner -g
 ```
 
 ## Requirements
@@ -89,6 +91,8 @@ If those companion skills are not installed, the agent can still follow the writ
 
 `tangsong-business-content-engine` does not require Feishu, Obsidian, a specific model, or an external connector. It works from pasted text or user-provided files. The default workflow is staged: it produces a content mother, matrix, and three platform drafts first, then waits for user edits and confirmation before generating the full weekly package. It does not publish automatically and does not treat reach metrics as proof of sales.
 
+`tangsong-opc-offline-event-planner` is designed for a complete, executable event pack rather than light/standard/advanced variants. It works from the organizer's real business, audience, event constraints, and public or authorized case material. It does not require Obsidian, Feishu, a local folder, or a private writing-style Skill. Missing information is labeled for confirmation; participant privacy, contact details, consent, and unverified results must not be published.
+
 ## Usage
 
 After installation, ask your agent with a consultation source:
@@ -115,6 +119,12 @@ For publishing a local skill:
 
 ```text
 Use $tangsong-skill-github-publisher to publish this local skill folder to my GitHub skills repository and verify npx discovery.
+```
+
+For a complete OPC offline event pack:
+
+```text
+Use $tangsong-opc-offline-event-planner to design and execute a complete offline event that can support my backend offer. I have not run an event before, so include owners, deadlines, acceptance checks, materials, onsite flow, follow-up, and public-case/privacy checks.
 ```
 
 For building a personal knowledge base:
