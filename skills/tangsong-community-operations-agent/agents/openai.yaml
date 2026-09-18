@@ -1,0 +1,4 @@
+interface:
+  display_name: "社群从0到1搭建与运营"
+  short_description: "定位社群、产出社群名字公告规则海报文案，并做运营计划与边界校验"
+  default_prompt: "Use $tangsong-community-operations-agent to position my community and produce the group name, announcement, rules, and poster copy."

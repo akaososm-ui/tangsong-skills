@@ -28,6 +28,7 @@ This repository currently publishes Tang Song workflow skills:
 | `tangsong-business-content-engine` | Turn one real content mother into a business-driven weekly package for WeChat Moments, WeChat Official Account, and short-video scripts. | Content mother card, 27-unit weekly matrix, three platform drafts, generation rule card, and reviewed weekly package. |
 | `ai-course-builder` | Turn real teaching experience, learner problems, and course materials into a reviewable class or curriculum. | Course brief, experience map, outline, teaching package, learner exercises, review gates, and retrospective assets. |
 | `tangsong-opc-offline-event-planner` | Design and execute a first or repeat OPC offline event that creates an onsite result and supports a clear backend next step. | Complete event strategy, recruitment and poster copy, registration questions, project schedule, role and material checklists, onsite agenda, follow-up, recap, and public case card. |
+| `tangsong-community-operations-agent` | Design and operate a private-domain community or group chat from zero to one, or fix an existing one. | Positioning card, the four core assets (group name, announcement, rules, poster copy), operations plan with layering and effort allocation, and a separate boundary and compliance check. |
 
 ## Install
 
@@ -58,6 +59,7 @@ npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-personal-ai-manua
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-business-content-engine -g
 npx -y skills add akaososm-ui/tangsong-skills --skill ai-course-builder -g
 npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-opc-offline-event-planner -g
+npx -y skills add akaososm-ui/tangsong-skills --skill tangsong-community-operations-agent -g
 ```
 
 ## Requirements
@@ -92,6 +94,8 @@ If those companion skills are not installed, the agent can still follow the writ
 `tangsong-business-content-engine` does not require Feishu, Obsidian, a specific model, or an external connector. It works from pasted text or user-provided files. The default workflow is staged: it produces a content mother, matrix, and three platform drafts first, then waits for user edits and confirmation before generating the full weekly package. It does not publish automatically and does not treat reach metrics as proof of sales.
 
 `tangsong-opc-offline-event-planner` is designed for a complete, executable event pack rather than light/standard/advanced variants. It works from the organizer's real business, audience, event constraints, and public or authorized case material. It does not require Obsidian, Feishu, a local folder, or a private writing-style Skill. Missing information is labeled for confirmation; participant privacy, contact details, consent, and unverified results must not be published.
+
+`tangsong-community-operations-agent` works from the operator's real business problem, audience, monetization model, and sustainability. It delivers one complete pack instead of light/standard/advanced variants, and it will not write a group name, announcement, rules, or poster copy before the positioning is clear. It refuses to design planted-member or fake-user tactics, and it will not invent member counts, revenue, testimonials, or conversion results. It runs a separate boundary and compliance pass covering fake demand, fabricated results, undeliverable promises, unattributed third-party material, privacy exposure, and platform risk. It does not require Feishu, Obsidian, or a specific connector.
 
 ## Usage
 
@@ -157,9 +161,15 @@ For course design:
 Use $ai-course-builder to turn my teaching materials into a reviewable, deliverable course plan.
 ```
 
+For building or fixing a community:
+
+```text
+Use $tangsong-community-operations-agent to position my community from zero. Ask me the seven positioning questions first, then produce the group name, announcement, rules, and poster copy, then run the boundary check. Do not write any copy before the positioning is clear.
+```
+
 ## Privacy
 
-These workflows may process consultation material, private drafts, and benchmark research notes. Before publishing outputs externally, review all drafts for client privacy, personal details, sensitive business information, transcript accuracy, and claims that require proof.
+These workflows may process consultation material, private drafts, benchmark research notes, and community member data. Before publishing outputs externally, review all drafts for client privacy, personal details, sensitive business information, transcript accuracy, and claims that require proof.
 
 ## License
 
